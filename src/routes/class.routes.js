@@ -1,15 +1,16 @@
 const express = require('express')
 const { createClasses, deleteClass, updateClass, getClasses } = require('../controllers/class.controller')
+const { verifyTokenAndAdmin, verifyTokenAndAuthorization } = require('../../middleware/auth')
 const router = express.Router()
 
 router
 .route('/')
-.post(createClasses)
-.get(getClasses)
+.post(verifyTokenAndAdmin,createClasses)
+.get(verifyTokenAndAdmin,getClasses)
 router
 .route('/:id')
-.delete(deleteClass)
-.put(updateClass)
+.delete(verifyTokenAndAdmin,deleteClass)
+.put(verifyTokenAndAdmin,updateClass)
 
 
 module.exports=router

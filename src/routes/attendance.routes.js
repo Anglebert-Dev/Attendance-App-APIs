@@ -1,15 +1,16 @@
 const express = require('express')
 const {createAttendance, getAttendanceReport} = require('../controllers/attendance.controller')
+const { verifyTokenAndAdmin } = require('../../middleware/auth')
 const router = express.Router()
 
 
 router
 .route('/')
-.post(createAttendance)
+.post(verifyTokenAndAdmin,createAttendance)
 
 router
 .route('/report')
-.get(getAttendanceReport)
+.get(verifyTokenAndAdmin,getAttendanceReport)
 
 
 
