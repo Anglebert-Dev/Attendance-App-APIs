@@ -26,6 +26,14 @@ const User = sequelize.define("User", {
     type: DataTypes.ENUM("user", "admin"),
     defaultValue: "user",
   },
+  verificationCode: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  isVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+  },
 });
 
 module.exports = User;

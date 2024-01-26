@@ -1,4 +1,8 @@
 const successHandler = require("../../middleware/successHandler");
+const {
+  sendVerificationEmail,
+  generateVerificationCode,
+} = require("../../utils/email.utils");
 const User = require("../models/user.model");
 
 bcrypt = require("bcrypt");
@@ -13,10 +17,28 @@ exports.register = async (req, res, next) => {
       email,
       role,
       password: hashedPassword,
+      verificationCode: generateVerificationCode(),
     });
+    sendVerificationEmail(user, user.verificationCode);
     successHandler(user, req, res, next, "", 201);
   } catch (error) {
     next(error);
+  }
+};
+
+exports.verifyEmail = async (req, res, next) => {
+  try {
+    const { verificationCode } = req.param;
+    const user = await User.findOne({ where: { verificationCode } });
+
+    if (user) {
+      await user.update({ isVerified: true, verificationCode: null });
+      res.status(200).json({ message: "Email verification successful." });
+    } else {
+      res.status(400).json({ error: "Invalid verification code." });
+    }
+  } catch (error) {
+    next();
   }
 };
 

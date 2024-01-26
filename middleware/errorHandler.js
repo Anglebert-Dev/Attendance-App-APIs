@@ -5,7 +5,7 @@ const errorHandler = (err, req, res, next) => {
   console.error(err);
 
   // logs the error to the console
-  // logger.error(`Error: ${err.message}`);
+  logger.error(`Error: ${err.message}`);
 
   // Sequelize validation errors
   if (err.name === "SequelizeValidationError") {

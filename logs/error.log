@@ -6,3 +6,5 @@
 [2024-01-26T00:00:12.736Z] [ERROR]: Error fetching classes: action is not defined
 [2024-01-26T00:00:12.755Z] [ERROR]: Error: action is not defined
 [2024-01-26T00:00:52.726Z] [ERROR]: Error: action is not defined
+[2024-01-26T00:43:55.909Z] [ERROR]: Error: Validation error
+[2024-01-26T00:46:36.384Z] [ERROR]: Error: mailOptions is not defined
