@@ -1,48 +1,56 @@
+const logger = require("../src/config/logger");
+
 const errorHandler = (err, req, res, next) => {
+
   console.error(err);
 
+  // logs the error to the console
+  // logger.error(`Error: ${err.message}`);
+
   // Sequelize validation errors
-  if (err.name === 'SequelizeValidationError') {
+  if (err.name === "SequelizeValidationError") {
     const errors = err.errors.map((error) => ({
       field: error.path,
       message: error.message,
     }));
 
-    return res.status(400).json({ errors, message: 'Validation error(s)' });
+    return res.status(400).json({ errors, message: "Validation error(s)" });
   }
 
   // Sequelize unique constraint violation
-  if (err.name === 'SequelizeUniqueConstraintError') {
+  if (err.name === "SequelizeUniqueConstraintError") {
     const errors = err.errors.map((error) => ({
       field: error.path,
       message: `Duplicate entry for ${error.path}`,
     }));
 
-    return res.status(400).json({ errors, message: 'Duplicate entry error' });
+    return res.status(400).json({ errors, message: "Duplicate entry error" });
   }
 
   // Sequelize foreign key constraint violation
-  if (err.name === 'SequelizeForeignKeyConstraintError') {
+  if (err.name === "SequelizeForeignKeyConstraintError") {
     const errors = err.fields.map((field) => ({
       field,
       message: `Foreign key constraint violation for ${field}`,
     }));
 
-    return res.status(400).json({ errors, message: 'Foreign key constraint error' });
+    return res
+      .status(400)
+      .json({ errors, message: "Foreign key constraint error" });
   }
 
   // Sequelize database error (general case)
-  if (err.name === 'SequelizeDatabaseError') {
-    return res.status(500).json({ message: 'Database error' });
+  if (err.name === "SequelizeDatabaseError") {
+    return res.status(500).json({ message: "Database error" });
   }
 
   // Authentication errors
-  if (err.name === 'TokenExpiredError') {
-    return res.status(401).json({ message: 'Token expired' });
+  if (err.name === "TokenExpiredError") {
+    return res.status(401).json({ message: "Token expired" });
   }
 
-  if (err.name === 'JsonWebTokenError' || err.name === 'NotBeforeError') {
-    return res.status(401).json({ message: 'Invalid token' });
+  if (err.name === "JsonWebTokenError" || err.name === "NotBeforeError") {
+    return res.status(401).json({ message: "Invalid token" });
   }
 
   // Handle other errors
@@ -51,7 +59,7 @@ const errorHandler = (err, req, res, next) => {
     return res.status(err.status).json({ message: err.message });
   } else {
     // Default to a 500 Internal Server Error for unhandled errors
-    return res.status(500).json({ message: 'Internal Server Error' });
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 };
 

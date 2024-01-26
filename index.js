@@ -7,10 +7,19 @@ const studentRoutes = require("./src/routes/student.routes");
 const attendanceRoutes = require("./src/routes/attendance.routes");
 const userRoutes = require("./src/routes/user.routes");
 const errorHandler = require("./middleware/errorhandler");
+const errorLogger = require("./middleware/errorLogger");
+const requestLogger = require("./middleware/requestLogger");
+
 
 const app = express();
 
 app.use(express.json());
+
+// loggers
+app.use(requestLogger);
+app.use(errorLogger);
+
+
 app.use("/api/v1/class", classRoutes);
 app.use("/api/v1/student", studentRoutes);
 app.use("/api/v1/attendance", attendanceRoutes);

@@ -1,0 +1,8 @@
+[2024-01-25T23:55:49.119Z] [ERROR]: Error: Invalid token format. Bearer token expected.
+[2024-01-25T23:57:52.172Z] [ERROR]: Error fetching classes: action is not defined
+[2024-01-25T23:57:52.177Z] [ERROR]: Error: action is not defined
+[2024-01-25T23:59:34.130Z] [ERROR]: Error fetching classes: action is not defined
+[2024-01-25T23:59:34.135Z] [ERROR]: Error: action is not defined
+[2024-01-26T00:00:12.736Z] [ERROR]: Error fetching classes: action is not defined
+[2024-01-26T00:00:12.755Z] [ERROR]: Error: action is not defined
+[2024-01-26T00:00:52.726Z] [ERROR]: Error: action is not defined

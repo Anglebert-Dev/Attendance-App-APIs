@@ -1,0 +1,24 @@
+[2024-01-25T23:50:33.904Z] [INFO]: GET /api/v1/class/ received at Fri Jan 26 2024 01:50:33 GMT+0200 (Central Africa Time)
+[2024-01-25T23:51:36.641Z] [INFO]: DELETE /api/v1/class/8b4da3bf-2686-492d-a37c-d6e730337cbb?id=d2d76bff-edf5-4ccf-92e4-dba48fb15ff5 received at Fri Jan 26 2024 01:51:36 GMT+0200 (Central Africa Time)
+[2024-01-25T23:51:36.657Z] [INFO]: Class deleted: PHP class
+[2024-01-25T23:52:10.926Z] [INFO]: POST /api/v1/auth/login received at Fri Jan 26 2024 01:52:10 GMT+0200 (Central Africa Time)
+[2024-01-25T23:53:26.134Z] [INFO]: POST /api/v1/class received at Fri Jan 26 2024 01:53:26 GMT+0200 (Central Africa Time)
+[2024-01-25T23:55:09.061Z] [INFO]: POST /api/v1/class received at Fri Jan 26 2024 01:55:09 GMT+0200 (Central Africa Time)
+[2024-01-25T23:55:49.115Z] [INFO]: POST /api/v1/class received at Fri Jan 26 2024 01:55:49 GMT+0200 (Central Africa Time)
+[2024-01-25T23:55:49.119Z] [ERROR]: Error: Invalid token format. Bearer token expected.
+[2024-01-25T23:57:39.124Z] [INFO]: class controller loaded
+[2024-01-25T23:57:44.271Z] [INFO]: class controller loaded
+[2024-01-25T23:57:52.151Z] [INFO]: GET /api/v1/class/ received at Fri Jan 26 2024 01:57:52 GMT+0200 (Central Africa Time)
+[2024-01-25T23:57:52.172Z] [ERROR]: Error fetching classes: action is not defined
+[2024-01-25T23:57:52.177Z] [ERROR]: Error: action is not defined
+[2024-01-25T23:59:31.162Z] [INFO]: class controller loaded
+[2024-01-25T23:59:32.742Z] [INFO]: class controller loaded
+[2024-01-25T23:59:34.111Z] [INFO]: GET /api/v1/class/ received at Fri Jan 26 2024 01:59:34 GMT+0200 (Central Africa Time)
+[2024-01-25T23:59:34.130Z] [ERROR]: Error fetching classes: action is not defined
+[2024-01-25T23:59:34.135Z] [ERROR]: Error: action is not defined
+[2024-01-26T00:00:12.680Z] [INFO]: GET /api/v1/class/ received at Fri Jan 26 2024 02:00:12 GMT+0200 (Central Africa Time)
+[2024-01-26T00:00:12.736Z] [ERROR]: Error fetching classes: action is not defined
+[2024-01-26T00:00:12.755Z] [ERROR]: Error: action is not defined
+[2024-01-26T00:00:52.700Z] [INFO]: GET /api/v1/class/ received at Fri Jan 26 2024 02:00:52 GMT+0200 (Central Africa Time)
+[2024-01-26T00:00:52.726Z] [ERROR]: Error: action is not defined
+[2024-01-26T00:01:24.363Z] [INFO]: GET /api/v1/class/ received at Fri Jan 26 2024 02:01:24 GMT+0200 (Central Africa Time)
