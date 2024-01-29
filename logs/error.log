@@ -27,3 +27,25 @@
 [2024-01-29T10:55:47.687Z] [ERROR]: Error: tokenExpirationTime is not defined
 [2024-01-29T10:59:25.734Z] [ERROR]: Error: resetTokenExpiration.getMinutes is not a function
 [2024-01-29T11:00:20.796Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T12:04:02.754Z] [ERROR]: Error: jwt expired
+[2024-01-29T12:04:58.106Z] [ERROR]: Error: jwt expired
+[2024-01-29T12:27:37.880Z] [ERROR]: Error: Reset token and new password are required.
+[2024-01-29T12:28:22.708Z] [ERROR]: Error: Reset token and new password are required.
+[2024-01-29T12:29:34.964Z] [ERROR]: Error: Reset token and new password are required.
+[2024-01-29T12:31:23.859Z] [ERROR]: Error: error.status is not a function
+[2024-01-29T12:31:58.780Z] [ERROR]: Error: Invalid reset token or token has expired.
+[2024-01-29T12:37:16.026Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:37:23.943Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:37:28.768Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:37:46.441Z] [ERROR]: SyntaxError: Expected ',' or '}' after property value in JSON at position 53 (line 4 column 15)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\raw-body\index.js:231:16)
+    at done (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:515:28)
+    at endReadableNT (node:internal/streams/readable:1589:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2024-01-29T12:37:51.129Z] [ERROR]: Error: Invalid email or password

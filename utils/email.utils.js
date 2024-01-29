@@ -46,7 +46,7 @@ const sendResetTokenEmail = (user, resetToken) => {
     from: process.env.GMAIL_EMAIL,
     to: user.email,
     subject: "Password Reset",
-    text: `Click the following link to reset your password: http://your-app.com/reset/${resetToken}`,
+    text: `Click the following link to reset your password: http://localhost:5000/api/v1/auth/reset-password/${resetToken}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {

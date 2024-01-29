@@ -66,6 +66,7 @@ exports.verifyEmail = async (req, res, next) => {
       user.verificationCodeExpiration <= new Date()
     ) {
       const error = new Error("Verification code has expired.");
+      user;
       error.status = 400;
       throw error;
     } else {
@@ -107,6 +108,40 @@ exports.forgotPassword = async (req, res, next) => {
     sendResetTokenEmail(user, resetToken);
 
     res.status(200).json({ user: user, message: "Password reset email sent." });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// user.controller.js
+
+exports.resetPassword = async (req, res, next) => {
+  try {
+    const { resetToken } = req.params;
+    const newPassword = req.body.password;
+
+    console.log(newPassword,resetToken);
+
+    if (!resetToken || !newPassword) {
+      const error = new Error("Reset token and new password are required.");
+      error.status = 400;
+      throw error;
+    }
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+    const user = await User.findOne({ where: { resetToken } });
+
+    if (user && user.resetTokenExpiration > new Date()) {
+      await user.update({
+        password: hashedPassword,
+        resetToken: null,
+        resetTokenExpiration: null,
+      });
+      res.status(200).json({ user:user, message: "Password reset successful." });
+    } else {
+      const error = new Error("Invalid reset token or token has expired.")
+      error.status=400
+      throw error
+    }
   } catch (error) {
     next(error);
   }

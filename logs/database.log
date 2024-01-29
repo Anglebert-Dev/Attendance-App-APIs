@@ -133,3 +133,51 @@
 [2024-01-29T10:59:25.734Z] [ERROR]: Error: resetTokenExpiration.getMinutes is not a function
 [2024-01-29T11:00:20.730Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 13:00:20 GMT+0200 (Central Africa Time)
 [2024-01-29T11:00:20.796Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T12:04:02.744Z] [INFO]: GET /api/v1/class/ received at Mon Jan 29 2024 14:04:02 GMT+0200 (Central Africa Time)
+[2024-01-29T12:04:02.754Z] [ERROR]: Error: jwt expired
+[2024-01-29T12:04:43.652Z] [INFO]: GET /api/v1//class/ received at Mon Jan 29 2024 14:04:43 GMT+0200 (Central Africa Time)
+[2024-01-29T12:04:58.102Z] [INFO]: GET /api/v1/class/ received at Mon Jan 29 2024 14:04:58 GMT+0200 (Central Africa Time)
+[2024-01-29T12:04:58.106Z] [ERROR]: Error: jwt expired
+[2024-01-29T12:05:30.723Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 14:05:30 GMT+0200 (Central Africa Time)
+[2024-01-29T12:15:27.498Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 14:15:27 GMT+0200 (Central Africa Time)
+[2024-01-29T12:16:07.658Z] [INFO]: GET /api/v1/auth/reset/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:16:07 GMT+0200 (Central Africa Time)
+[2024-01-29T12:21:33.435Z] [INFO]: GET /api/v1/auth/reset/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:21:33 GMT+0200 (Central Africa Time)
+[2024-01-29T12:22:06.063Z] [INFO]: GET /api/v1/auth/reset/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:22:06 GMT+0200 (Central Africa Time)
+[2024-01-29T12:26:58.960Z] [INFO]: POST /api/v1/auth/reset/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:26:58 GMT+0200 (Central Africa Time)
+[2024-01-29T12:27:37.874Z] [INFO]: POST /api/v1/auth/reset-password/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:27:37 GMT+0200 (Central Africa Time)
+[2024-01-29T12:27:37.880Z] [ERROR]: Error: Reset token and new password are required.
+[2024-01-29T12:28:04.423Z] [INFO]: POST /api/v1/auth/login received at Mon Jan 29 2024 14:28:04 GMT+0200 (Central Africa Time)
+[2024-01-29T12:28:22.706Z] [INFO]: POST /api/v1/auth/reset-password/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:28:22 GMT+0200 (Central Africa Time)
+[2024-01-29T12:28:22.708Z] [ERROR]: Error: Reset token and new password are required.
+[2024-01-29T12:29:34.957Z] [INFO]: POST /api/v1/auth/reset-password/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:29:34 GMT+0200 (Central Africa Time)
+[2024-01-29T12:29:34.964Z] [ERROR]: Error: Reset token and new password are required.
+[2024-01-29T12:30:03.344Z] [INFO]: POST /api/v1/auth/reset-password/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:30:03 GMT+0200 (Central Africa Time)
+[2024-01-29T12:31:23.822Z] [INFO]: POST /api/v1/auth/reset-password/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:31:23 GMT+0200 (Central Africa Time)
+[2024-01-29T12:31:23.859Z] [ERROR]: Error: error.status is not a function
+[2024-01-29T12:31:58.756Z] [INFO]: POST /api/v1/auth/reset-password/17929647-4fcd-4706-abc8-138e4f60147d received at Mon Jan 29 2024 14:31:58 GMT+0200 (Central Africa Time)
+[2024-01-29T12:31:58.780Z] [ERROR]: Error: Invalid reset token or token has expired.
+[2024-01-29T12:36:15.190Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 14:36:15 GMT+0200 (Central Africa Time)
+[2024-01-29T12:36:31.785Z] [INFO]: GET /api/v1/auth/reset-password/e7be85ea-208a-4760-b872-b3860e653948 received at Mon Jan 29 2024 14:36:31 GMT+0200 (Central Africa Time)
+[2024-01-29T12:37:05.881Z] [INFO]: POST /api/v1/auth/reset-password/e7be85ea-208a-4760-b872-b3860e653948 received at Mon Jan 29 2024 14:37:05 GMT+0200 (Central Africa Time)
+[2024-01-29T12:37:16.019Z] [INFO]: POST /api/v1/auth/login received at Mon Jan 29 2024 14:37:16 GMT+0200 (Central Africa Time)
+[2024-01-29T12:37:16.026Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:37:23.939Z] [INFO]: POST /api/v1/auth/login received at Mon Jan 29 2024 14:37:23 GMT+0200 (Central Africa Time)
+[2024-01-29T12:37:23.943Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:37:28.764Z] [INFO]: POST /api/v1/auth/login received at Mon Jan 29 2024 14:37:28 GMT+0200 (Central Africa Time)
+[2024-01-29T12:37:28.768Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:37:46.441Z] [ERROR]: SyntaxError: Expected ',' or '}' after property value in JSON at position 53 (line 4 column 15)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\raw-body\index.js:231:16)
+    at done (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\raw-body\index.js:220:7)
+    at IncomingMessage.onEnd (C:\Users\D'anglebert\Documents\javascript\node-attendance\node_modules\raw-body\index.js:280:7)
+    at IncomingMessage.emit (node:events:515:28)
+    at endReadableNT (node:internal/streams/readable:1589:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2024-01-29T12:37:51.120Z] [INFO]: POST /api/v1/auth/login received at Mon Jan 29 2024 14:37:51 GMT+0200 (Central Africa Time)
+[2024-01-29T12:37:51.129Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T12:40:06.029Z] [INFO]: POST /api/v1/auth/register received at Mon Jan 29 2024 14:40:06 GMT+0200 (Central Africa Time)
+[2024-01-29T12:40:12.033Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 14:40:12 GMT+0200 (Central Africa Time)
+[2024-01-29T12:40:31.393Z] [INFO]: GET /api/v1/auth/reset-password/d649fd47-747c-40f4-ba45-263b2e393d07 received at Mon Jan 29 2024 14:40:31 GMT+0200 (Central Africa Time)
