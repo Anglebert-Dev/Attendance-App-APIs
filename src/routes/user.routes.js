@@ -1,11 +1,13 @@
-const express =require('express')
-const { register, login, verifyEmail } = require('../controllers/user')
-const { verifyTokenAndAdmin } = require('../../middleware/auth')
+const express = require("express");
+const { register, login, verifyEmail, forgotPassword } = require("../controllers/user");
+const { verifyTokenAndAdmin } = require("../../middleware/auth");
 
-const router =express.Router()
+const router = express.Router();
 
-router.route('/register').post(register)
-router.route('/login').post(login)
-router.route('/verify-email/:verificationCode').get(verifyEmail)
+router.route("/register").post(register);
+router.route("/login").post(login);
+router.route("/verify-email/:verificationCode").get(verifyEmail);
 
-module.exports = router
+router.route("/forgot-password").post(forgotPassword);
+
+module.exports = router;

@@ -90,3 +90,46 @@
 [2024-01-29T09:34:33.415Z] [ERROR]: Error: Verification code has expired.
 [2024-01-29T09:34:43.638Z] [INFO]: GET /api/v1/auth/verify-email/bf1ed6cd-e349-4b58-9edc-f1501e08455c received at Mon Jan 29 2024 11:34:43 GMT+0200 (Central Africa Time)
 [2024-01-29T09:34:43.645Z] [ERROR]: Error: Verification code has expired.
+[2024-01-29T09:51:40.260Z] [INFO]: GET /api/v1/auth/verify-email/forgot-password received at Mon Jan 29 2024 11:51:40 GMT+0200 (Central Africa Time)
+[2024-01-29T09:51:40.282Z] [ERROR]: Error: Invalid verification code.
+[2024-01-29T09:51:56.249Z] [INFO]: GET /api/v1/auth/forgot-password received at Mon Jan 29 2024 11:51:56 GMT+0200 (Central Africa Time)
+[2024-01-29T09:56:05.468Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 11:56:05 GMT+0200 (Central Africa Time)
+[2024-01-29T09:56:54.336Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 11:56:54 GMT+0200 (Central Africa Time)
+[2024-01-29T09:57:17.422Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 11:57:17 GMT+0200 (Central Africa Time)
+[2024-01-29T09:57:29.221Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 11:57:29 GMT+0200 (Central Africa Time)
+[2024-01-29T10:17:35.280Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:17:35 GMT+0200 (Central Africa Time)
+[2024-01-29T10:19:38.834Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:19:38 GMT+0200 (Central Africa Time)
+[2024-01-29T10:19:41.004Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:19:41 GMT+0200 (Central Africa Time)
+[2024-01-29T10:23:11.740Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:23:11 GMT+0200 (Central Africa Time)
+[2024-01-29T10:30:17.331Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:30:17 GMT+0200 (Central Africa Time)
+[2024-01-29T10:32:42.906Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:32:42 GMT+0200 (Central Africa Time)
+[2024-01-29T10:33:16.634Z] [INFO]: POST /api/v1/auth/register received at Mon Jan 29 2024 12:33:16 GMT+0200 (Central Africa Time)
+[2024-01-29T10:33:16.637Z] [ERROR]: Error: error.status is not a function
+[2024-01-29T10:35:21.999Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:35:21 GMT+0200 (Central Africa Time)
+[2024-01-29T10:38:33.378Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:38:33 GMT+0200 (Central Africa Time)
+[2024-01-29T10:38:33.429Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T10:41:54.868Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:41:54 GMT+0200 (Central Africa Time)
+[2024-01-29T10:41:54.904Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T10:42:06.451Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:42:06 GMT+0200 (Central Africa Time)
+[2024-01-29T10:42:06.463Z] [ERROR]: Error: Table 'attendance_db.users' doesn't exist
+[2024-01-29T10:42:16.813Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:42:16 GMT+0200 (Central Africa Time)
+[2024-01-29T10:42:16.861Z] [ERROR]: Error: User not found.
+[2024-01-29T10:42:21.352Z] [INFO]: POST /api/v1/auth/register received at Mon Jan 29 2024 12:42:21 GMT+0200 (Central Africa Time)
+[2024-01-29T10:42:21.356Z] [ERROR]: Error: error.status is not a function
+[2024-01-29T10:43:45.734Z] [INFO]: POST /api/v1/auth/register received at Mon Jan 29 2024 12:43:45 GMT+0200 (Central Africa Time)
+[2024-01-29T10:43:45.743Z] [ERROR]: Error: Username, email, password, and role are required.
+[2024-01-29T10:44:17.734Z] [INFO]: POST /api/v1/auth/register received at Mon Jan 29 2024 12:44:17 GMT+0200 (Central Africa Time)
+[2024-01-29T10:44:37.190Z] [INFO]: GET /api/v1/auth/verify-email/a2983b97-5a79-42d1-981c-a805888fac96 received at Mon Jan 29 2024 12:44:37 GMT+0200 (Central Africa Time)
+[2024-01-29T10:44:51.774Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:44:51 GMT+0200 (Central Africa Time)
+[2024-01-29T10:44:51.801Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T10:55:41.138Z] [INFO]: POST /api/v1/auth/register received at Mon Jan 29 2024 12:55:41 GMT+0200 (Central Africa Time)
+[2024-01-29T10:55:41.266Z] [ERROR]: Error: Validation error
+[2024-01-29T10:55:47.672Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:55:47 GMT+0200 (Central Africa Time)
+[2024-01-29T10:55:47.687Z] [ERROR]: Error: tokenExpirationTime is not defined
+[2024-01-29T10:56:29.650Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:56:29 GMT+0200 (Central Africa Time)
+[2024-01-29T10:57:44.632Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:57:44 GMT+0200 (Central Africa Time)
+[2024-01-29T10:58:40.732Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:58:40 GMT+0200 (Central Africa Time)
+[2024-01-29T10:59:25.683Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 12:59:25 GMT+0200 (Central Africa Time)
+[2024-01-29T10:59:25.734Z] [ERROR]: Error: resetTokenExpiration.getMinutes is not a function
+[2024-01-29T11:00:20.730Z] [INFO]: POST /api/v1/auth/forgot-password received at Mon Jan 29 2024 13:00:20 GMT+0200 (Central Africa Time)
+[2024-01-29T11:00:20.796Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1

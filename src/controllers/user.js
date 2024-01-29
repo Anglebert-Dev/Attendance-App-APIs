@@ -2,6 +2,8 @@ const successHandler = require("../../middleware/successHandler");
 const {
   sendVerificationEmail,
   generateVerificationCode,
+  sendResetTokenEmail,
+  generateResetToken,
 } = require("../../utils/email.utils");
 const User = require("../models/user.model");
 
@@ -13,6 +15,13 @@ const { code, expirationTime } = generateVerificationCode();
 exports.register = async (req, res, next) => {
   try {
     const { username, email, password, role } = req.body;
+    if (!username || !email || !password) {
+      const error = new Error(
+        "Username, email, password, and role are required."
+      );
+      error.status = 400;
+      throw error;
+    }
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await User.create({
       username,
@@ -64,6 +73,40 @@ exports.verifyEmail = async (req, res, next) => {
       error.status = 400;
       throw error;
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.forgotPassword = async (req, res, next) => {
+  try {
+    const { email } = req.body;
+
+    if (!email) {
+      const error = new Error("Email is required.");
+      error.status = 400;
+      throw error;
+    }
+
+    const user = await User.findOne({ where: { email } });
+
+    if (!user) {
+      const error = new Error("User not found.");
+      error.status = 400;
+      throw error;
+    }
+
+    const { resetToken, resetTokenExpiration } = generateResetToken();
+    console.log(resetToken, resetTokenExpiration);
+
+    await user.update({
+      resetToken: resetToken,
+      resetTokenExpiration: resetTokenExpiration,
+    });
+
+    sendResetTokenEmail(user, resetToken);
+
+    res.status(200).json({ user: user, message: "Password reset email sent." });
   } catch (error) {
     next(error);
   }

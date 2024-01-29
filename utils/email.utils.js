@@ -12,12 +12,11 @@ const transporter = nodemailer.createTransport({
 
 const generateVerificationCode = () => {
   const code = uuidv4();
-  const expirationTime=new Date()
-  expirationTime.setMinutes(expirationTime.getMinutes()+ 1);
-  return {code,expirationTime} 
-
+  const expirationTime = new Date();
+  expirationTime.setMinutes(expirationTime.getMinutes() + 1);
+  return { code, expirationTime };
 };
- 
+
 const sendVerificationEmail = (user, verificationCode) => {
   const mailOption = {
     from: process.env.GMAIL_EMAIL,
@@ -36,12 +35,15 @@ const sendVerificationEmail = (user, verificationCode) => {
 };
 
 const generateResetToken = () => {
-  return uuidv4();
+  const resetToken = uuidv4();
+  const resetTokenExpiration = new Date();
+  resetTokenExpiration.setMinutes(resetTokenExpiration.getMinutes() + 3);
+  return { resetToken, resetTokenExpiration };
 };
 
 const sendResetTokenEmail = (user, resetToken) => {
   const mailOptions = {
-    from: "your_email@example.com", // Replace with your email
+    from: process.env.GMAIL_EMAIL,
     to: user.email,
     subject: "Password Reset",
     text: `Click the following link to reset your password: http://your-app.com/reset/${resetToken}`,

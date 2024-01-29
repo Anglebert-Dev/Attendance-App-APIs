@@ -28,16 +28,24 @@ const User = sequelize.define("User", {
   },
   verificationCode: {
     type: DataTypes.STRING,
-    allowNull: true,  
+    allowNull: true,
   },
   verificationCodeExpiration: {
     type: DataTypes.DATE,
-    allowNull: true,  
+    allowNull: true,
   },
   isVerified: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },
+  resetToken: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  resetTokenExpiration: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  }, 
 });
 
 module.exports = User;

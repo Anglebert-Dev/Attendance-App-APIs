@@ -14,3 +14,16 @@
 [2024-01-29T09:34:27.208Z] [ERROR]: Error: Invalid verification code.
 [2024-01-29T09:34:33.415Z] [ERROR]: Error: Verification code has expired.
 [2024-01-29T09:34:43.645Z] [ERROR]: Error: Verification code has expired.
+[2024-01-29T09:51:40.282Z] [ERROR]: Error: Invalid verification code.
+[2024-01-29T10:33:16.637Z] [ERROR]: Error: error.status is not a function
+[2024-01-29T10:38:33.429Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T10:41:54.904Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T10:42:06.463Z] [ERROR]: Error: Table 'attendance_db.users' doesn't exist
+[2024-01-29T10:42:16.861Z] [ERROR]: Error: User not found.
+[2024-01-29T10:42:21.356Z] [ERROR]: Error: error.status is not a function
+[2024-01-29T10:43:45.743Z] [ERROR]: Error: Username, email, password, and role are required.
+[2024-01-29T10:44:51.801Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
+[2024-01-29T10:55:41.266Z] [ERROR]: Error: Validation error
+[2024-01-29T10:55:47.687Z] [ERROR]: Error: tokenExpirationTime is not defined
+[2024-01-29T10:59:25.734Z] [ERROR]: Error: resetTokenExpiration.getMinutes is not a function
+[2024-01-29T11:00:20.796Z] [ERROR]: Error: Incorrect datetime value: 'Invalid date' for column 'resetTokenExpiration' at row 1
