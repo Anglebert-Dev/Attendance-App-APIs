@@ -13,8 +13,8 @@
       type:DataTypes.UUID,
       allowNull:false,
       references:{
-        model:'students',
-        key:"student_id"
+        model:'students', 
+        key:"student_id" 
       },
       onDelete:'CASCADE',
       onUpdate:'CASCADE'

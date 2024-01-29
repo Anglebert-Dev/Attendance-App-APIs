@@ -11,9 +11,13 @@ const transporter = nodemailer.createTransport({
 });
 
 const generateVerificationCode = () => {
-  return uuidv4();
-};
+  const code = uuidv4();
+  const expirationTime=new Date()
+  expirationTime.setMinutes(expirationTime.getMinutes()+ 1);
+  return {code,expirationTime} 
 
+};
+ 
 const sendVerificationEmail = (user, verificationCode) => {
   const mailOption = {
     from: process.env.GMAIL_EMAIL,

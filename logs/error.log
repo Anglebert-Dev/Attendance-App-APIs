@@ -8,3 +8,9 @@
 [2024-01-26T00:00:52.726Z] [ERROR]: Error: action is not defined
 [2024-01-26T00:43:55.909Z] [ERROR]: Error: Validation error
 [2024-01-26T00:46:36.384Z] [ERROR]: Error: mailOptions is not defined
+[2024-01-29T08:39:53.938Z] [ERROR]: Error: Invalid email or password
+[2024-01-29T08:59:30.702Z] [ERROR]: Error: Table 'attendance_db.users' doesn't exist
+[2024-01-29T09:27:05.895Z] [ERROR]: Error: Validation error
+[2024-01-29T09:34:27.208Z] [ERROR]: Error: Invalid verification code.
+[2024-01-29T09:34:33.415Z] [ERROR]: Error: Verification code has expired.
+[2024-01-29T09:34:43.645Z] [ERROR]: Error: Verification code has expired.

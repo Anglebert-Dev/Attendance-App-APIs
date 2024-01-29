@@ -8,6 +8,8 @@ const User = require("../models/user.model");
 bcrypt = require("bcrypt");
 jwt = require("jsonwebtoken");
 
+const { code, expirationTime } = generateVerificationCode();
+
 exports.register = async (req, res, next) => {
   try {
     const { username, email, password, role } = req.body;
@@ -17,7 +19,8 @@ exports.register = async (req, res, next) => {
       email,
       role,
       password: hashedPassword,
-      verificationCode: generateVerificationCode(),
+      verificationCode: code,
+      verificationCodeExpiration: expirationTime,
     });
     sendVerificationEmail(user, user.verificationCode);
     successHandler(user, req, res, next, "", 201);
@@ -28,17 +31,41 @@ exports.register = async (req, res, next) => {
 
 exports.verifyEmail = async (req, res, next) => {
   try {
-    const { verificationCode } = req.param;
+    const { verificationCode } = req.params;
     const user = await User.findOne({ where: { verificationCode } });
 
-    if (user) {
-      await user.update({ isVerified: true, verificationCode: null });
-      res.status(200).json({ message: "Email verification successful." });
+    if (!user) {
+      const error = new Error("Invalid verification code.");
+      error.status = 400;
+      throw error;
+    }
+
+    if (user.isVerified) {
+      successHandler(user, req, res, next, "User already verified", 200);
+    } else if (
+      user.verificationCodeExpiration &&
+      user.verificationCodeExpiration > new Date()
+    ) {
+      await user.update({
+        isVerified: true,
+        verificationCode: null,
+        verificationCodeExpiration: null,
+      });
+      successHandler(user, req, res, next, "User verified", 200);
+    } else if (
+      user.verificationCodeExpiration &&
+      user.verificationCodeExpiration <= new Date()
+    ) {
+      const error = new Error("Verification code has expired.");
+      error.status = 400;
+      throw error;
     } else {
-      res.status(400).json({ error: "Invalid verification code." });
+      const error = new Error("Invalid verification code.");
+      error.status = 400;
+      throw error;
     }
   } catch (error) {
-    next();
+    next(error);
   }
 };
 
