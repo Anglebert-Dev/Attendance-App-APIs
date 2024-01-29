@@ -65,6 +65,7 @@ exports.verifyEmail = async (req, res, next) => {
       user.verificationCodeExpiration &&
       user.verificationCodeExpiration <= new Date()
     ) {
+      await user.destroy();
       const error = new Error("Verification code has expired.");
       user;
       error.status = 400;
@@ -120,7 +121,7 @@ exports.resetPassword = async (req, res, next) => {
     const { resetToken } = req.params;
     const newPassword = req.body.password;
 
-    console.log(newPassword,resetToken);
+    console.log(newPassword, resetToken);
 
     if (!resetToken || !newPassword) {
       const error = new Error("Reset token and new password are required.");
@@ -136,11 +137,13 @@ exports.resetPassword = async (req, res, next) => {
         resetToken: null,
         resetTokenExpiration: null,
       });
-      res.status(200).json({ user:user, message: "Password reset successful." });
+      res
+        .status(200)
+        .json({ user: user, message: "Password reset successful." });
     } else {
-      const error = new Error("Invalid reset token or token has expired.")
-      error.status=400
-      throw error
+      const error = new Error("Invalid reset token or token has expired.");
+      error.status = 400;
+      throw error;
     }
   } catch (error) {
     next(error);
